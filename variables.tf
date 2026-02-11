@@ -23,7 +23,7 @@ EOT
     resource_group_name   = string
     approval_required     = optional(bool)
     description           = optional(string)
-    subscription_required = optional(bool, true)
+    subscription_required = optional(bool) # Default: true
     subscriptions_limit   = optional(number)
     terms                 = optional(string)
   }))
