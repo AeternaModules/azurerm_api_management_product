@@ -1,45 +1,45 @@
 output "api_management_products_id" {
   description = "Map of id values across all api_management_products, keyed the same as var.api_management_products"
-  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.id }
+  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.id if v.id != null && length(v.id) > 0 }
 }
 output "api_management_products_api_management_name" {
   description = "Map of api_management_name values across all api_management_products, keyed the same as var.api_management_products"
-  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.api_management_name }
+  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.api_management_name if v.api_management_name != null && length(v.api_management_name) > 0 }
 }
 output "api_management_products_approval_required" {
   description = "Map of approval_required values across all api_management_products, keyed the same as var.api_management_products"
-  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.approval_required }
+  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.approval_required if v.approval_required != null }
 }
 output "api_management_products_description" {
   description = "Map of description values across all api_management_products, keyed the same as var.api_management_products"
-  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.description }
+  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.description if v.description != null && length(v.description) > 0 }
 }
 output "api_management_products_display_name" {
   description = "Map of display_name values across all api_management_products, keyed the same as var.api_management_products"
-  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.display_name }
+  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.display_name if v.display_name != null && length(v.display_name) > 0 }
 }
 output "api_management_products_product_id" {
   description = "Map of product_id values across all api_management_products, keyed the same as var.api_management_products"
-  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.product_id }
+  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.product_id if v.product_id != null && length(v.product_id) > 0 }
 }
 output "api_management_products_published" {
   description = "Map of published values across all api_management_products, keyed the same as var.api_management_products"
-  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.published }
+  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.published if v.published != null }
 }
 output "api_management_products_resource_group_name" {
   description = "Map of resource_group_name values across all api_management_products, keyed the same as var.api_management_products"
-  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.resource_group_name }
+  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.resource_group_name if v.resource_group_name != null && length(v.resource_group_name) > 0 }
 }
 output "api_management_products_subscription_required" {
   description = "Map of subscription_required values across all api_management_products, keyed the same as var.api_management_products"
-  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.subscription_required }
+  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.subscription_required if v.subscription_required != null }
 }
 output "api_management_products_subscriptions_limit" {
   description = "Map of subscriptions_limit values across all api_management_products, keyed the same as var.api_management_products"
-  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.subscriptions_limit }
+  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.subscriptions_limit if v.subscriptions_limit != null }
 }
 output "api_management_products_terms" {
   description = "Map of terms values across all api_management_products, keyed the same as var.api_management_products"
-  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.terms }
+  value       = { for k, v in azurerm_api_management_product.api_management_products : k => v.terms if v.terms != null && length(v.terms) > 0 }
 }
 
